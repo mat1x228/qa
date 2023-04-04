@@ -8,13 +8,14 @@ setCommonPlugins();
 
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './*_test.js',
+  tests: "tests/*_test.js",
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'http://localhost',
+      url: 'https://www.saucedemo.com/',
       show: false,
-      windowSize: '1200x900'
+      windowSize: '1200x900',
+      waitForNavigation: "networkidle0"
     }
   },
   include: {
